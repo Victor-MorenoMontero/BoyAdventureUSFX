@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\BoyAdventureUSFX.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{405A7E04-BB85-495F-8B41-D9BC0EF36449}</UniqueIdentifier>
+      <UniqueIdentifier>{D676E191-149F-4C84-872E-8BA1EDFDEF0F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BoyAdventureUSFX.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{20CCB5C3-3EA9-4B06-874B-9D8B3AE5CDCC}</UniqueIdentifier>
+      <UniqueIdentifier>{7CE7CFB1-519E-486C-8A81-96B083A50982}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\BoyAdventureUSFX">
-      <UniqueIdentifier>{D74485DD-F510-4EC5-893B-09C53C309AF4}</UniqueIdentifier>
+      <UniqueIdentifier>{BCFFEE4D-9453-4557-94CE-132F7CD1945A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BoyAdventureUSFX\BoyAdventureUSFX.Build.cs">
       <Filter>Source\BoyAdventureUSFX</Filter>
@@ -65,6 +65,18 @@
       <Filter>Source\BoyAdventureUSFX</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\BoyAdventureUSFX\ObstaculoPared.h">
+      <Filter>Source\BoyAdventureUSFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BoyAdventureUSFX\ObstaculoPiso.cpp">
+      <Filter>Source\BoyAdventureUSFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BoyAdventureUSFX\ObstaculoPiso.h">
+      <Filter>Source\BoyAdventureUSFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BoyAdventureUSFX\ObstaculoTrampa.cpp">
+      <Filter>Source\BoyAdventureUSFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BoyAdventureUSFX\ObstaculoTrampa.h">
       <Filter>Source\BoyAdventureUSFX</Filter>
     </ClInclude>
   </ItemGroup>
