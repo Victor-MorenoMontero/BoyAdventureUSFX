@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "BoyAdventureUSFX",
+			"Path": "C:\\Users\\ASUS\\Documents\\USFX\\SIS457\\BoyAdventureUSFX\\Source\\BoyAdventureUSFX.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "BoyAdventureUSFXEditor",
+			"Path": "C:\\Users\\ASUS\\Documents\\USFX\\SIS457\\BoyAdventureUSFX\\Source\\BoyAdventureUSFXEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
