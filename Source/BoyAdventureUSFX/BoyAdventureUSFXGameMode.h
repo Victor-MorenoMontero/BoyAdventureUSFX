@@ -6,6 +6,10 @@
 #include "GameFramework/GameModeBase.h"
 #include "BoyAdventureUSFXGameMode.generated.h"
 
+class AObstaculo;
+class AObstaculoPared;
+class AParedMetal;
+
 UCLASS(minimalapi)
 class ABoyAdventureUSFXGameMode : public AGameModeBase
 {
@@ -13,7 +17,15 @@ class ABoyAdventureUSFXGameMode : public AGameModeBase
 
 public:
 	ABoyAdventureUSFXGameMode();
+
+	virtual void BeginPlay() override;
+private:
+	AObstaculoPared* Obstaculo;
+	AParedMetal* ParedMetal01;
+	AParedMetal* ParedMetal02;
 };
+
+
 
 
 

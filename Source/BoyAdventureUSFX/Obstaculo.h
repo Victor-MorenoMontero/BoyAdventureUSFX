@@ -46,8 +46,8 @@ public:
 	void SetTipoObstaculo(FString _TipoObstaculo) { TipoObstaculo = _TipoObstaculo; }
 	FString GetTipoObstaculo() const { return TipoObstaculo; }
 
-	//virtual void Activarse();
-	//virtual void Desactivarse();
+	virtual void Activarse();
+	virtual void Desactivarse();
 
 	virtual void OnOverlapsBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {}
 

@@ -14,4 +14,23 @@ class BOYADVENTUREUSFX_API AObstaculoPared : public AObstaculo
 {
 	GENERATED_BODY()
 	
+protected:
+	bool Activo;
+	bool AbiertoCompletamente;
+	float DesplazamientoPuerta;
+	float LimiteDesplazamientoPuerta;
+
+protected:
+	virtual void BeginPlay() override;
+
+public:
+	virtual void Tick(float DeltaTime) override;
+	AObstaculoPared();
+
+	FString Estilo;
+	FString Material;
+
+	virtual void Activarse() override;
+	virtual void Desactivarse() override;
+
 };

@@ -22,17 +22,15 @@ AObstaculo::AObstaculo()
 	{
 		MallaObstaculo->SetStaticMesh(ObjetoMallaObstaculo.Object);
 	}
-	/*
-	void AObstaculo::Activarse()
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("El obstáculo se ha activado, pero no hace nada"));
-	}
-	void AObstaculo::Desactivarse()
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("El obstaculo se ha desactivado, pero no hace nada"));
-	}
-	*/
+}
 
+void AObstaculo::Activarse()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("El obstáculo se ha activado, pero no hace nada"));
+}
+void AObstaculo::Desactivarse()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("El obstaculo se ha desactivado, pero no hace nada"));
 }
 
 // Called when the game starts or when spawned
