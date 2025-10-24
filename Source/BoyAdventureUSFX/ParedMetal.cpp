@@ -3,6 +3,7 @@
 
 #include "ParedMetal.h"
 
+
 AParedMetal::AParedMetal()
 {
 	PrimaryActorTick.bCanEverTick = true;
@@ -21,7 +22,7 @@ AParedMetal::AParedMetal()
 		MallaObstaculo->SetMaterial(0, MaterialParedAsset.Object);
 		MallaObstaculo->SetWorldScale3D(FVector(5.0f,10.0f, 10.0f));
 	}
-	DesplazamientoPuerta = 0.0f;
+	DesplazamientoPuerta = 0;
 	LimiteDesplazamientoPuerta = 150.f;
 	Activo = true;
 	IncrementoDesplazamiento = 0.8f;
@@ -60,3 +61,4 @@ void AParedMetal::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	Activarse();
 }
+

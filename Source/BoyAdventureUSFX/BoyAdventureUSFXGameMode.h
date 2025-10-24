@@ -25,7 +25,6 @@ private:
 	AObstaculoPared* Obstaculo;
 	AParedMetal* ParedMetal01;
 	AParedMetal* ParedMetal02;
-
 	APlataforma* Plataforma01;
 
 

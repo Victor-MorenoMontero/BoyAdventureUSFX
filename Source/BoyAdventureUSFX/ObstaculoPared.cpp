@@ -13,7 +13,7 @@ AObstaculoPared::AObstaculoPared()
 	Activo = true;
 	AbiertoCompletamente = false;
 	DesplazamientoPuerta = 0.0f;
-	LimiteDesplazamientoPuerta = 150.0f;
+	LimiteDesplazamientoPuerta = 500.0f;
 
 	static ConstructorHelpers::FObjectFinder<UMaterialInterface> MaterialAsset(TEXT("Material'/Game/StarterContent/Materials/M_Ground_Gravel.M_Ground_Gravel'"));
 
@@ -25,15 +25,17 @@ AObstaculoPared::AObstaculoPared()
 
 void AObstaculoPared::Activarse()
 {
-	if (DesplazamientoPuerta >= LimiteDesplazamientoPuerta)
+	FVector PosicionActual = GetActorLocation();
+	if (PosicionActual.X >= LimiteDesplazamientoPuerta)
 	{
 		AbiertoCompletamente = true;
 		Activo = false; //Desactiva el obst
 		UE_LOG(LogTemp, Warning, TEXT("Obstáculo abierto completamente"));
+
 	}
 	else if (Activo)
 	{
-		FVector PosicionActual = GetActorLocation();
+		
 		float NuevoX = PosicionActual.X + 0.8f;
 		FVector NuevaPosicion = FVector(NuevoX, PosicionActual.Y, PosicionActual.Z);
 		SetActorLocation(NuevaPosicion);
@@ -53,5 +55,7 @@ void AObstaculoPared::BeginPlay()
 void AObstaculoPared::Tick(float Deltatime)
 {
 	Super::Tick(Deltatime);
-	Activarse();
+		Activarse();
+
 }
+
