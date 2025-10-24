@@ -6,6 +6,8 @@
 #include "Obstaculo.h"
 #include "ObstaculoPared.h"
 #include "ParedMetal.h"
+#include "Plataforma.h"
+#include "ComponentePlataforma.h"
 
 ABoyAdventureUSFXGameMode::ABoyAdventureUSFXGameMode()
 {
@@ -41,5 +43,17 @@ void ABoyAdventureUSFXGameMode::BeginPlay()
 		FVector Ubicacion02(-100.0f, 1200.0f, 200.0f);
 		FRotator Rotacion02(0.f, 0.f, 0.f);
 		ParedMetal02 = Mundo->SpawnActor<AParedMetal>(AParedMetal::StaticClass(), Ubicacion02, Rotacion02);
+
+		Plataforma01 = Mundo->SpawnActor<APlataforma>(APlataforma::StaticClass());
+		if (Plataforma01)
+		{
+			Plataforma01->setAltoEntrePisos(100.f);
+			Plataforma01->setAltoComponente(70.f);
+			Plataforma01->setAnchoComponente(200.f);
+			Plataforma01->setProfundidadComponente(100.f);
+			Plataforma01->setSeparacionComponentes(150.f);
+			Plataforma01->setPosicionInicial(FVector(200.f, -300.f, 250.f));
+			Plataforma01->generarPlataforma();
+		}
 	}
 }

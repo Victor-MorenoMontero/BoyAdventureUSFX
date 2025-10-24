@@ -1,0 +1,5 @@
+C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Intermediate\Build\Win64\UE4Editor\Development\BoyAdventureUSFX\Definitions.BoyAdventureUSFX.h
+C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Source\BoyAdventureUSFX\Plataforma.h
+C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Intermediate\Build\Win64\UE4Editor\Inc\BoyAdventureUSFX\Plataforma.generated.h
+C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Source\BoyAdventureUSFX\ComponentePlataforma.h
+C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Intermediate\Build\Win64\UE4Editor\Inc\BoyAdventureUSFX\ComponentePlataforma.generated.h

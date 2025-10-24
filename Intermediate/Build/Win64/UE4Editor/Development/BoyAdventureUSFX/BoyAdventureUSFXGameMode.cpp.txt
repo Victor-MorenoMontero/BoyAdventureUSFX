@@ -19,3 +19,7 @@ C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Source\BoyAdventureUSFX\Obs
 C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Intermediate\Build\Win64\UE4Editor\Inc\BoyAdventureUSFX\ObstaculoPared.generated.h
 C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Source\BoyAdventureUSFX\ParedMetal.h
 C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Intermediate\Build\Win64\UE4Editor\Inc\BoyAdventureUSFX\ParedMetal.generated.h
+C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Source\BoyAdventureUSFX\Plataforma.h
+C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Intermediate\Build\Win64\UE4Editor\Inc\BoyAdventureUSFX\Plataforma.generated.h
+C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Source\BoyAdventureUSFX\ComponentePlataforma.h
+C:\Users\ASUS\Documents\USFX\SIS457\BoyAdventureUSFX\Intermediate\Build\Win64\UE4Editor\Inc\BoyAdventureUSFX\ComponentePlataforma.generated.h

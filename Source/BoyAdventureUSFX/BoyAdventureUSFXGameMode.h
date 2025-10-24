@@ -9,6 +9,8 @@
 class AObstaculo;
 class AObstaculoPared;
 class AParedMetal;
+class APlataforma;
+class AComponentePlataforma;
 
 UCLASS(minimalapi)
 class ABoyAdventureUSFXGameMode : public AGameModeBase
@@ -23,6 +25,11 @@ private:
 	AObstaculoPared* Obstaculo;
 	AParedMetal* ParedMetal01;
 	AParedMetal* ParedMetal02;
+
+	APlataforma* Plataforma01;
+
+
+	FTimerHandle EliminarComponentePlataformaTimer;
 };
 
 
