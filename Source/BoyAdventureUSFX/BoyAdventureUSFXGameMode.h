@@ -21,14 +21,20 @@ public:
 	ABoyAdventureUSFXGameMode();
 
 	virtual void BeginPlay() override;
+	//virtual void Tick(float DeltaTime) override;
+
 private:
 	AObstaculoPared* Obstaculo;
 	AParedMetal* ParedMetal01;
 	AParedMetal* ParedMetal02;
 	APlataforma* Plataforma01;
 
-
+	FTimerHandle MovimientoComponentesPlataformaTimer;
 	FTimerHandle EliminarComponentePlataformaTimer;
+
+
+public:
+	void MoverComponentePlataforma();
 };
 
 

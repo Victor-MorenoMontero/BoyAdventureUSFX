@@ -3,10 +3,8 @@
 
 #include "ComponentePlataforma.h"
 
-// Sets default values
 AComponentePlataforma::AComponentePlataforma()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	MallaComponentePlataforma = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MallaComponentePlataforma"));
@@ -23,19 +21,54 @@ AComponentePlataforma::AComponentePlataforma()
 	{
 		MallaComponentePlataforma->SetMaterial(0, MaterialPlataformaAsset.Object);
 	}
+
+	bEnMovimiento = false;
+
+	desplazamientoPX = 100.0f;
+	desplazamientoNX = 100.0f;	
+	desplazamientoPY = 100.0f;
+	desplazamientoNY = 100.0f;
+	desplazamientoPZ = 100.0f;
+	desplazamientoNZ = 100.0f;
+
+	incrementoX = 1.0f;
+	incrementoY = 1.0f;
+	incrementoZ = 1.0f;
 }
 
-// Called when the game starts or when spawned
 void AComponentePlataforma::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	posicionInicial = GetActorLocation();
 }
 
-// Called every frame
 void AComponentePlataforma::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	MoverseX();
+}
 
+FVector AComponentePlataforma::GetPosicionActual()
+{
+	return GetActorLocation();
+}
+
+void AComponentePlataforma::MoverseX() 
+{
+	if (bEnMovimiento)
+	{
+		FVector posicionActual = GetActorLocation();
+
+		if (posicionActual.X >= (posicionActual.X + desplazamientoPX))
+		{
+			incrementoX = -FMath::Abs(incrementoX);
+		}
+		else if (posicionActual.X <= (posicionActual.X - desplazamientoNX))
+		{
+			incrementoX = FMath::Abs(incrementoX);
+		}
+		posicionActual.X += incrementoX;
+		SetActorLocation(posicionActual);
+	}
 }
 

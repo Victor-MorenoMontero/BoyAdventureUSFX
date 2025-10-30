@@ -47,13 +47,30 @@ void ABoyAdventureUSFXGameMode::BeginPlay()
 		Plataforma01 = Mundo->SpawnActor<APlataforma>(APlataforma::StaticClass());
 		if (Plataforma01)
 		{
-			Plataforma01->setAltoEntrePisos(100.f);
+			//Plataforma01->setAltoEntrePisos(100.f);
 			Plataforma01->setAltoComponente(70.f);
 			Plataforma01->setAnchoComponente(200.f);
-			Plataforma01->setProfundidadComponente(100.f);
+			//Plataforma01->setProfundidadComponente(100.f);
 			Plataforma01->setSeparacionComponentes(150.f);
 			Plataforma01->setPosicionInicial(FVector(200.f, -300.f, 250.f));
 			Plataforma01->generarPlataforma();
 		}
+	}
+
+	GetWorld()->GetTimerManager().SetTimer(
+		MovimientoComponentesPlataformaTimer,
+		this,
+		&ABoyAdventureUSFXGameMode::MoverComponentePlataforma,
+		4.0f,
+		true
+	);
+}
+
+void ABoyAdventureUSFXGameMode::MoverComponentePlataforma()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Moviendo componente plataforma"));
+	if (Plataforma01)
+	{
+		Plataforma01->MoverComponenteAleatorio();
 	}
 }

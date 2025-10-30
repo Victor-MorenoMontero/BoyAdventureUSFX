@@ -55,6 +55,7 @@ public:
 	void generarPlataforma();
 	void destruirPlataforma();
 	void destruirComponentePlataforma(FVector posicion);
+	void MoverComponenteAleatorio();
 	void EliminarComponenteAleatorio();
 
 	AComponentePlataforma* getComponentePlataforma(int _piso, int _numeroComponente);

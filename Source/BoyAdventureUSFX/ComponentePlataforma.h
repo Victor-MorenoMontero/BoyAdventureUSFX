@@ -15,6 +15,23 @@ public:
 	// Sets default values for this actor's properties
 	AComponentePlataforma();
 
+	bool bEnMovimiento;
+
+	float desplazamientoPX;
+	float desplazamientoNX;
+	float desplazamientoPY;
+	float desplazamientoNY;	
+	float desplazamientoPZ;
+	float desplazamientoNZ;
+
+	float incrementoX;
+	float incrementoY;
+	float incrementoZ;
+	FVector posicionInicial;
+	
+	FVector GetPosicionActual();
+	void MoverseX();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
