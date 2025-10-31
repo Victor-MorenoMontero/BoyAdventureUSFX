@@ -31,6 +31,8 @@ public:
 	
 	FVector GetPosicionActual();
 	void MoverseX();
+	void MoverseY();
+	void MoverseZ();
 
 protected:
 	// Called when the game starts or when spawned

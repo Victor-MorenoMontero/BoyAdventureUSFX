@@ -141,14 +141,14 @@ void APlataforma::MoverComponenteAleatorio()
 	}
 	else
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, FString::Printf(TEXT("No se encontr�� el componente en piso %d, componente %d"), PisoAleatorio, ComponenteAleatorio));
-		UE_LOG(LogTemp, Warning, TEXT("No se encontr�� el componente en piso %d, componente %d"), PisoAleatorio, ComponenteAleatorio);
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, FString::Printf(TEXT("No se encontró el componente en piso %d, componente %d"), PisoAleatorio, ComponenteAleatorio));
+		UE_LOG(LogTemp, Warning, TEXT("No se encontró el componente en piso %d, componente %d"), PisoAleatorio, ComponenteAleatorio);
 		return;
 	}
 
 	if (componentePlataformaActual)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Eliminando componente en piso %d, componente %d"), PisoAleatorio, ComponenteAleatorio));
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Moviendo componente en piso %d, componente %d"), PisoAleatorio, ComponenteAleatorio));
 
 		componentePlataformaActual->bEnMovimiento = !componentePlataformaActual->bEnMovimiento;
 	}

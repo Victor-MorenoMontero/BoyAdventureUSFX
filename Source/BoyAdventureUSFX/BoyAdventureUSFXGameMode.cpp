@@ -68,7 +68,7 @@ void ABoyAdventureUSFXGameMode::BeginPlay()
 
 void ABoyAdventureUSFXGameMode::MoverComponentePlataforma()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Moviendo componente plataforma"));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Moviendo componente plataforma"));
 	if (Plataforma01)
 	{
 		Plataforma01->MoverComponenteAleatorio();

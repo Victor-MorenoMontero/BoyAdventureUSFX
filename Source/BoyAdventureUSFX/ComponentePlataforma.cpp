@@ -46,28 +46,65 @@ void AComponentePlataforma::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	MoverseX();
+	MoverseY();
+	MoverseZ();
 }
 
-FVector AComponentePlataforma::GetPosicionActual()
-{
-	return GetActorLocation();
-}
+//FVector AComponentePlataforma::GetPosicionActual()
+//{
+//	return GetActorLocation();
+//}
 
 void AComponentePlataforma::MoverseX() 
 {
+	FVector posicionActual = GetActorLocation();
 	if (bEnMovimiento)
 	{
-		FVector posicionActual = GetActorLocation();
-
-		if (posicionActual.X >= (posicionActual.X + desplazamientoPX))
+		if (posicionActual.X >= (posicionInicial.X + desplazamientoPX))
 		{
 			incrementoX = -FMath::Abs(incrementoX);
 		}
-		else if (posicionActual.X <= (posicionActual.X - desplazamientoNX))
+		else if (posicionActual.X <= (posicionInicial.X - desplazamientoNX))
 		{
 			incrementoX = FMath::Abs(incrementoX);
 		}
 		posicionActual.X += incrementoX;
+		SetActorLocation(posicionActual);
+	}
+}
+
+void AComponentePlataforma::MoverseY()
+{
+	FVector posicionActual = GetActorLocation();
+	if (bEnMovimiento)
+	{
+		if (posicionActual.Y >= (posicionInicial.Y + desplazamientoPY))
+		{
+			incrementoY = -FMath::Abs(incrementoY);
+		}
+		else if (posicionActual.Y <= (posicionInicial.Y - desplazamientoNY))
+		{
+			incrementoY = FMath::Abs(incrementoY);
+		}
+		posicionActual.Y += incrementoY;
+		SetActorLocation(posicionActual);
+	}
+}
+
+void AComponentePlataforma::MoverseZ()
+{
+	FVector posicionActual = GetActorLocation();
+	if (bEnMovimiento)
+	{
+		if (posicionActual.Z >= (posicionInicial.Z + desplazamientoPZ))
+		{
+			incrementoZ = -FMath::Abs(incrementoZ);
+		}
+		else if (posicionActual.Z <= (posicionInicial.Z - desplazamientoNZ))
+		{
+			incrementoZ = FMath::Abs(incrementoZ);
+		}
+		posicionActual.Z += incrementoZ;
 		SetActorLocation(posicionActual);
 	}
 }
